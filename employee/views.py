@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect ,HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.shortcuts import render_to_response, get_object_or_404
 from django.contrib import messages
-from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth import update_session_auth_hash, login
 from django.urls import reverse
 from .forms import CustomUserCreationForm, CustomUserChangeForm, CustomPasswordChangeForm
 
@@ -10,9 +10,11 @@ from .forms import CustomUserCreationForm, CustomUserChangeForm, CustomPasswordC
 
 
 def employee_listing(request):
-    employees = User.objects.all()
-    return render(request, 'employee_listing.html', {'employees': employees})
-
+    if request.user.is_authenticated:
+        employees = User.objects.all()
+        return render(request, 'employee_listing.html', {'employees': employees})
+    else:
+        return redirect('login')
 
 def signup(request):
     if request.method == 'POST':

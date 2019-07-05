@@ -16,6 +16,8 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, re_path
+from django.views.generic import RedirectView
+
 from employee.views import employee_listing, signup, account_view, account_edit, update_password
 from django.contrib.auth.views import *
 

@@ -7,7 +7,7 @@
      <div class="card-body">
     <form method="post" >
         {% csrf_token %}
-        {{ form.as_p }}
+        {% include 'form.html' %}
         <button type="submit" class="btn btn-outline-danger">Login</button>
     </form>
      </div>
