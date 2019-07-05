@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block title %}Account Details :{% endblock title %}
+
+{% block body %}
+
+    <div class="card align-items-center">
+     <div class="card-body offset-md-0">
+        <p><b> Username :</b> {{ user }}</p>
+         <p><b>First name </b>: {{ user.first_name }}</p>
+         <p><b>Last name  </b>: {{ user.last_name }}</p>
+         <p><b>Email      </b>: {{ user.email }}</p><br>
+        <a class="btn btn-warning" href="{% url 'account_edit' %}">Edit Account</a>
+     </div>
+{% endblock body %}

@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+        <title class="stacked">Employee HomePage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body style="font-family: Comfortaa">
+
+     <nav class="navbar navbar-expand bg-light">
+         <a class="navbar-brand">Demo</a>
+        <div class="container-fluid">   <!-- menu button for login logout and account modification -->
+            <div class="dropdown align-middle">
+                {% if user.is_authenticated %}
+                  <button class="btn btn-outline-success btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ user.username }}
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{% url 'account_view' %}">My Account</a>
+                        <a class="dropdown-item" href="{% url 'employee_listing' %}">List of Employees</a>
+                        <a class="dropdown-item" href="{% url 'update_password' %}">Change Your Password</a>
+                        <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                    {% else %}
+                      <button class="btn btn-danger btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{% url 'signup' %}">Signup</a>
+                        <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+                        <a class="dropdown-item" href="{% url 'password_reset'%}">Password Reset</a>
+                      </div>
+
+                {% endif%}
+                </div>
+            </div><br>
+        </div>
+    </div>
+    </nav>
+
+
+
+     <h1 class="text-center" style="font-family: Caveat,cursive;" align="center">{% block title %}{% endblock title %}</h1>
+
+
+     <div class="container">
+
+        <div class="row justify-content-center">
+
+        {% block body %}{% endblock body %}
+        </div>
+     </div>
+
+
+    <footer class="card-footer fixed-bottom justify-content-center" >
+      <div class="container">
+        <span class="text-muted">Copyright @ISSAM ZGUIRI.</span>
+      </div>
+    </footer>
+    </body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>
