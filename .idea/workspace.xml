@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f09283df-ab11-4ef6-bcb9-774cb229c02d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/employee/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_reset_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_reset_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -294,12 +288,12 @@
       <workItem from="1562337204339" duration="7344000" />
       <workItem from="1562349759011" duration="1041000" />
       <workItem from="1562406766722" duration="3659000" />
-      <workItem from="1562473571213" duration="5177000" />
+      <workItem from="1562473571213" duration="5777000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112447000" />
+    <option name="totallyTimeSpent" value="113047000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
