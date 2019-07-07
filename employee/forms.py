@@ -97,3 +97,4 @@ class CustomPasswordChangeForm(PasswordChangeForm):
                     code='password_mismatch',
                 )
         return password2
+
