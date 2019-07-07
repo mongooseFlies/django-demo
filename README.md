@@ -1,6 +1,10 @@
 # django-demo #
 
-:octocat:  Pages: registration, login, user list and personal account 
+:octocat:  Pages:
+  - [x] registration
+  - [x] login
+  - [x] user list
+  - [x] personal account 
 
 ### Task lists ###
   
